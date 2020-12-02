@@ -180,6 +180,7 @@ void MainWindow::slot_btn_tabmain_start() {
     srv.request.taskId=2;
     srv.request.mode= false;
     startTaskAggreServer_client.call(srv);
+    
 }
 
 void MainWindow::slot_btn_tabmain_sysReset() {
