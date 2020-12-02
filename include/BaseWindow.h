@@ -283,6 +283,27 @@ public:
     QHBoxLayout *horizontalLayout_15;
     QPushButton *btn_twofinger_open;
     QPushButton *btn_twofinger_close;
+    //点位记录
+    QWidget *tab_tab_debug_poseDebug;
+    QHBoxLayout *horizontalLayout_29;
+    QHBoxLayout *horizontalLayout_30;
+    QVBoxLayout *verticalLayout_14;
+    QGroupBox *groupBox_3;
+    QHBoxLayout *horizontalLayout_31;
+    QPlainTextEdit *plainTextEdit_showPoseInfo;
+    QVBoxLayout *verticalLayout_12;
+    QGroupBox *gBox_showFileInfo;
+    QHBoxLayout *horizontalLayout_32;
+    QPushButton *btn_tab_debug_openfile;
+    QGroupBox *groupBox_2;
+    QHBoxLayout *horizontalLayout_33;
+    QGridLayout *gridLayout;
+    QLabel *label_tab_debug_dirname;
+    QPushButton *btn_tab_debug_recordPose;
+    QPushButton *btn_tab_debug_writePose;
+    QLineEdit *lineEdit_dirname;
+    QLabel *label_tab_debug_fileName;
+    QLineEdit *lineEdit_filename;
     QWidget *tab_recorder;
     QHBoxLayout *horizontalLayout_3;
     QVBoxLayout *vLayout_tab_recorder_1;

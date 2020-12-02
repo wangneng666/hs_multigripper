@@ -1103,6 +1103,197 @@ void BaseWindow::initUi(QMainWindow *MainWindow) {
 
     tabWidget_tab_debug->addTab(tab_tab_debug_gripper, QString());
 
+    tab_tab_debug_poseDebug = new QWidget();
+    tab_tab_debug_poseDebug->setObjectName(QStringLiteral("tab_tab_debug_poseDebug"));
+    horizontalLayout_29 = new QHBoxLayout(tab_tab_debug_poseDebug);
+    horizontalLayout_29->setSpacing(6);
+    horizontalLayout_29->setContentsMargins(11, 11, 11, 11);
+    horizontalLayout_29->setObjectName(QStringLiteral("horizontalLayout_29"));
+    horizontalLayout_30 = new QHBoxLayout();
+    horizontalLayout_30->setSpacing(6);
+    horizontalLayout_30->setObjectName(QStringLiteral("horizontalLayout_30"));
+    verticalLayout_14 = new QVBoxLayout();
+    verticalLayout_14->setSpacing(6);
+    verticalLayout_14->setObjectName(QStringLiteral("verticalLayout_14"));
+    groupBox_3 = new QGroupBox(tab_tab_debug_poseDebug);
+    groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
+    groupBox_3->setStyleSheet(QLatin1String("QGroupBox{\n"
+                                            "\n"
+                                            "border-width:2px;\n"
+                                            "\n"
+                                            "border-style:solid;\n"
+                                            "\n"
+                                            "border-radius: 10px;\n"
+                                            "\n"
+                                            "border-color:gray;\n"
+                                            "\n"
+                                            "margin-top:0.5ex;\n"
+                                            "\n"
+                                            "}\n"
+                                            "\n"
+                                            "QGroupBox::title{\n"
+                                            "\n"
+                                            "subcontrol-origin:margin;\n"
+                                            "\n"
+                                            "subcontrol-position:top left;\n"
+                                            "\n"
+                                            "left:10px;\n"
+                                            "\n"
+                                            "margin-left:0px;\n"
+                                            "\n"
+                                            "padding:0 1px;\n"
+                                            "\n"
+                                            "}"));
+    horizontalLayout_31 = new QHBoxLayout(groupBox_3);
+    horizontalLayout_31->setSpacing(6);
+    horizontalLayout_31->setContentsMargins(11, 11, 11, 11);
+    horizontalLayout_31->setObjectName(QStringLiteral("horizontalLayout_31"));
+    plainTextEdit_showPoseInfo = new QPlainTextEdit(groupBox_3);
+    plainTextEdit_showPoseInfo->setObjectName(QStringLiteral("plainTextEdit_showPoseInfo"));
+
+    horizontalLayout_31->addWidget(plainTextEdit_showPoseInfo);
+
+
+    verticalLayout_14->addWidget(groupBox_3);
+
+
+    horizontalLayout_30->addLayout(verticalLayout_14);
+
+    verticalLayout_12 = new QVBoxLayout();
+    verticalLayout_12->setSpacing(6);
+    verticalLayout_12->setObjectName(QStringLiteral("verticalLayout_12"));
+    gBox_showFileInfo = new QGroupBox(tab_tab_debug_poseDebug);
+    gBox_showFileInfo->setObjectName(QStringLiteral("gBox_showFileInfo"));
+    gBox_showFileInfo->setStyleSheet(QLatin1String("QGroupBox{\n"
+                                                   "\n"
+                                                   "border-width:2px;\n"
+                                                   "\n"
+                                                   "border-style:solid;\n"
+                                                   "\n"
+                                                   "border-radius: 10px;\n"
+                                                   "\n"
+                                                   "border-color:gray;\n"
+                                                   "\n"
+                                                   "margin-top:0.5ex;\n"
+                                                   "\n"
+                                                   "}\n"
+                                                   "\n"
+                                                   "QGroupBox::title{\n"
+                                                   "\n"
+                                                   "subcontrol-origin:margin;\n"
+                                                   "\n"
+                                                   "subcontrol-position:top left;\n"
+                                                   "\n"
+                                                   "left:10px;\n"
+                                                   "\n"
+                                                   "margin-left:0px;\n"
+                                                   "\n"
+                                                   "padding:0 1px;\n"
+                                                   "\n"
+                                                   "}"));
+    horizontalLayout_32 = new QHBoxLayout(gBox_showFileInfo);
+    horizontalLayout_32->setSpacing(6);
+    horizontalLayout_32->setContentsMargins(11, 11, 11, 11);
+    horizontalLayout_32->setObjectName(QStringLiteral("horizontalLayout_32"));
+    btn_tab_debug_openfile = new QPushButton(gBox_showFileInfo);
+    btn_tab_debug_openfile->setObjectName(QStringLiteral("btn_tab_debug_openfile"));
+    btn_tab_debug_openfile->setMaximumSize(QSize(150, 50));
+
+    horizontalLayout_32->addWidget(btn_tab_debug_openfile);
+
+
+    verticalLayout_12->addWidget(gBox_showFileInfo);
+
+    groupBox_2 = new QGroupBox(tab_tab_debug_poseDebug);
+    groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
+    groupBox_2->setStyleSheet(QLatin1String("QGroupBox{\n"
+                                            "\n"
+                                            "border-width:2px;\n"
+                                            "\n"
+                                            "border-style:solid;\n"
+                                            "\n"
+                                            "border-radius: 10px;\n"
+                                            "\n"
+                                            "border-color:gray;\n"
+                                            "\n"
+                                            "margin-top:0.5ex;\n"
+                                            "\n"
+                                            "}\n"
+                                            "\n"
+                                            "QGroupBox::title{\n"
+                                            "\n"
+                                            "subcontrol-origin:margin;\n"
+                                            "\n"
+                                            "subcontrol-position:top left;\n"
+                                            "\n"
+                                            "left:10px;\n"
+                                            "\n"
+                                            "margin-left:0px;\n"
+                                            "\n"
+                                            "padding:0 1px;\n"
+                                            "\n"
+                                            "}"));
+    horizontalLayout_33 = new QHBoxLayout(groupBox_2);
+    horizontalLayout_33->setSpacing(6);
+    horizontalLayout_33->setContentsMargins(11, 11, 11, 11);
+    horizontalLayout_33->setObjectName(QStringLiteral("horizontalLayout_33"));
+    gridLayout = new QGridLayout();
+    gridLayout->setSpacing(6);
+    gridLayout->setObjectName(QStringLiteral("gridLayout"));
+    label_tab_debug_dirname = new QLabel(groupBox_2);
+    label_tab_debug_dirname->setObjectName(QStringLiteral("label_tab_debug_dirname"));
+    label_tab_debug_dirname->setMaximumSize(QSize(150, 50));
+
+    gridLayout->addWidget(label_tab_debug_dirname, 0, 0, 1, 1);
+
+    btn_tab_debug_recordPose = new QPushButton(groupBox_2);
+    btn_tab_debug_recordPose->setObjectName(QStringLiteral("btn_tab_debug_recordPose"));
+    btn_tab_debug_recordPose->setMaximumSize(QSize(150, 50));
+    btn_tab_debug_recordPose->setText("记录点位");
+    gridLayout->addWidget(btn_tab_debug_recordPose, 2, 0, 1, 1);
+
+    btn_tab_debug_writePose = new QPushButton(groupBox_2);
+    btn_tab_debug_writePose->setObjectName(QStringLiteral("btn_tab_debug_writePose"));
+    btn_tab_debug_writePose->setMaximumSize(QSize(150, 50));
+
+    gridLayout->addWidget(btn_tab_debug_writePose, 2, 1, 1, 1);
+
+    lineEdit_dirname = new QLineEdit(groupBox_2);
+    lineEdit_dirname->setObjectName(QStringLiteral("lineEdit_dirname"));
+    lineEdit_dirname->setMaximumSize(QSize(250, 50));
+
+    gridLayout->addWidget(lineEdit_dirname, 0, 1, 1, 1);
+
+    label_tab_debug_fileName = new QLabel(groupBox_2);
+    label_tab_debug_fileName->setObjectName(QStringLiteral("label_tab_debug_fileName"));
+    label_tab_debug_fileName->setMaximumSize(QSize(150, 50));
+
+    gridLayout->addWidget(label_tab_debug_fileName, 1, 0, 1, 1);
+
+    lineEdit_filename = new QLineEdit(groupBox_2);
+    lineEdit_filename->setObjectName(QStringLiteral("lineEdit_filename"));
+    lineEdit_filename->setMaximumSize(QSize(250, 50));
+
+    gridLayout->addWidget(lineEdit_filename, 1, 1, 1, 1);
+
+
+    horizontalLayout_33->addLayout(gridLayout);
+
+
+    verticalLayout_12->addWidget(groupBox_2);
+
+    verticalLayout_12->setStretch(0, 1);
+    verticalLayout_12->setStretch(1, 2);
+
+    horizontalLayout_30->addLayout(verticalLayout_12);
+
+    horizontalLayout_30->setStretch(0, 1);
+    horizontalLayout_30->setStretch(1, 1);
+
+    horizontalLayout_29->addLayout(horizontalLayout_30);
+
+    tabWidget_tab_debug->addTab(tab_tab_debug_poseDebug, QString());
+
     verticalLayout_5->addWidget(tabWidget_tab_debug);
 
     tabWidget->addTab(tab_debug, QString());
@@ -1348,6 +1539,15 @@ void BaseWindow::retranslateUi(QMainWindow *MainWindow) {
     btn_twofinger_open->setText(QApplication::translate("MainWindow", "\345\274\240\345\274\200", nullptr));
     btn_twofinger_close->setText(QApplication::translate("MainWindow", "\345\205\263\351\227\255", nullptr));
     tabWidget_tab_debug->setTabText(tabWidget_tab_debug->indexOf(tab_tab_debug_gripper), QApplication::translate("MainWindow", "\345\244\271\347\210\252\350\260\203\350\257\225", nullptr));
+    tabWidget_tab_debug->setTabText(tabWidget_tab_debug->indexOf(tab_tab_debug_gripper), QApplication::translate("MainWindow", "\345\244\271\347\210\252\350\260\203\350\257\225", 0));
+    groupBox_3->setTitle(QApplication::translate("MainWindow", "\347\202\271\344\275\215\346\230\276\347\244\272", 0));
+    gBox_showFileInfo->setTitle(QApplication::translate("MainWindow", "\346\230\276\347\244\272\347\202\271\344\275\215", 0));
+    btn_tab_debug_openfile->setText(QApplication::translate("MainWindow", "\346\211\223\345\274\200\346\226\207\344\273\266", 0));
+    groupBox_2->setTitle(QApplication::translate("MainWindow", "\350\256\260\345\275\225\347\202\271\344\275\215", 0));
+    label_tab_debug_dirname->setText(QApplication::translate("MainWindow", "\346\226\207\344\273\266\345\244\271\345\220\215\347\247\260", 0));
+    btn_tab_debug_writePose->setText(QApplication::translate("MainWindow", "\345\206\231\345\205\245\347\202\271\344\275\215", 0));
+    label_tab_debug_fileName->setText(QApplication::translate("MainWindow", "\346\226\207\344\273\266\345\220\215", 0));
+    tabWidget_tab_debug->setTabText(tabWidget_tab_debug->indexOf(tab_tab_debug_poseDebug), QApplication::translate("MainWindow", "\347\202\271\344\275\215\350\260\203\350\257\225", 0));
     tabWidget->setTabText(tabWidget->indexOf(tab_debug), QApplication::translate("MainWindow", "\350\260\203\350\257\225\347\225\214\351\235\242", nullptr));
     btn_tab_recoder_ouputRecorder->setText(QApplication::translate("MainWindow", "\346\227\245\345\277\227\345\257\274\345\207\272", nullptr));
     btn_tab_recoder_clearRecorder->setText(QApplication::translate("MainWindow", "\346\227\245\345\277\227\346\270\205\351\231\244", nullptr));

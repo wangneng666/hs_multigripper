@@ -411,8 +411,7 @@ compiler_moc_source_clean:
 compiler_uic_make_all: ui_mainwindow.h
 compiler_uic_clean:
 	-$(DEL_FILE) ui_mainwindow.h
-ui_mainwindow.h: ../hs_multigripper/mainwindow.ui \
-		/usr/include/x86_64-linux-gnu/qt5/QtWebKitWidgets/QWebView
+ui_mainwindow.h: ../hs_multigripper/mainwindow.ui
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../hs_multigripper/mainwindow.ui -o ui_mainwindow.h
 
 compiler_yacc_decl_make_all:

@@ -30,8 +30,14 @@
 #include "hirop_msgs/quickChange_set4.h"
 #include "hirop_msgs/shelfStatus.h"
 #include "hirop_msgs/startTaskCmd.h"
+#include "hirop_msgs/savePoseData.h"
+#include "hirop_msgs/saveDataEnd.h"
 #include <atomic>
 #include <thread>
+
+#include <moveit/move_group_interface/move_group_interface.h>
+#include <geometry_msgs/PoseStamped.h>
+#include <geometry_msgs/Pose.h>
 //标准库
 #include "ros/ros.h"
 #include <iostream>
@@ -61,12 +67,12 @@ public:
     ~MainWindow();
 
 private:
-private:
     map<string, devDetector*> map_devDetector;//运行准备状态监控器
     map<string, fsmState*> map_fsmState;      //状态机状态监控
     vector<string> in_nodeNameList;           //ros节点名称列表
     bool startUpFlag_devconn= false;
-
+    moveit::planning_interface::MoveGroupInterface *moveit_group;
+    vector<geometry_msgs::PoseStamped> tra_pose;
 private:
     //qt部分
     QTimer* Timer_listenStatus;
@@ -83,6 +89,8 @@ private:
     ros::ServiceClient closeGripper_client;
     ros::ServiceClient quickchangeSet_client;
     ros::ServiceClient startTaskAggreServer_client;
+    ros::ServiceClient savePoseMulti;
+    ros::ServiceClient save_pose_data;
 
     ros::Subscriber fsmState_subscriber;
     ros::Subscriber robStatus_subscriber;
@@ -143,6 +151,9 @@ private:
     void slot_btn_fourfinger_close();
     void slot_btn_twofinger_open();
     void slot_btn_twofinger_close();
+    void slot_btn_tab_debug_openfile();
+    void slot_btn_tab_debug_recordPose();
+    void slot_btn_tab_debug_writePose();
     void slot_btn_tab_recoder_ouputRecorder();
     void slot_btn_tab_recoder_clearRecorder();
 

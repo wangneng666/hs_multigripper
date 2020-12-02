@@ -6,8 +6,8 @@
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef A_H
-#define A_H
+#ifndef B_H
+#define B_H
 
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
@@ -2057,4 +2057,4 @@ namespace Ui {
 
 QT_END_NAMESPACE
 
-#endif // A_H
+#endif // B_H

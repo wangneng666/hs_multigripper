@@ -76,6 +76,12 @@ void MainWindow::SysVarInit() {
         lableShowImag(fsmstate.second->lableList_showStatus,Qt::lightGray);
     }
 
+    try {
+        moveit_group = new moveit::planning_interface::MoveGroupInterface("arm");
+    }catch (exception e){
+        cout<<e.what()<<endl;
+    }
+
 }
 
 void MainWindow::initRosToptic() {
@@ -89,7 +95,11 @@ void MainWindow::initRosToptic() {
     quickchangeSet_client = Node->serviceClient<hirop_msgs::quickChange_set4>("/gripperquickchange/set");
     startTaskAggreServer_client = Node->serviceClient<hirop_msgs::startTaskCmd>("/startTaskAggreServer");
 
+    savePoseMulti = Node->serviceClient<hirop_msgs::savePoseData>("savePoseMulti");
+    save_pose_data = Node->serviceClient<hirop_msgs::saveDataEnd>("save_data_end");
+
     fsmState_subscriber=Node->subscribe<hirop_msgs::taskCmdRet>("/task_state",1000,boost::bind(&MainWindow::callback_fsmState_subscriber,this,_1));
+
     robStatus_subscriber=Node->subscribe<industrial_msgs::RobotStatus>("robot_status",1,boost::bind(&MainWindow::callback_robStatus_subscriber,this,_1));
     personImg_subcriber=Node->subscribe<sensor_msgs::Image>("/videphoto_feedback",1,boost::bind(&MainWindow::callback_peopleDetectImg_subscriber, this, _1));
     // personImg_subcriber=Node->subscribe<sensor_msgs::Image>("/usb_cam/image_raw",1,boost::bind(&MainWindow::callback_peopleDetectImg_subscriber, this, _1));
@@ -150,6 +160,10 @@ void MainWindow::signalAndSlot() {
     connect(btn_twofinger_open,&QPushButton::clicked,this,&MainWindow::slot_btn_twofinger_open);
     connect(btn_twofinger_close,&QPushButton::clicked,this,&MainWindow::slot_btn_twofinger_close);
 
+    connect(btn_tab_debug_openfile,&QPushButton::clicked,this,&MainWindow::slot_btn_tab_debug_openfile);
+    connect(btn_tab_debug_writePose,&QPushButton::clicked,this,&MainWindow::slot_btn_tab_debug_writePose);
+    connect(btn_tab_debug_recordPose,&QPushButton::clicked,this,&MainWindow::slot_btn_tab_debug_recordPose);
+
     //日志界面
     connect(btn_tab_recoder_ouputRecorder,&QPushButton::clicked,this,&MainWindow::slot_btn_tab_recoder_ouputRecorder);
     connect(btn_tab_recoder_clearRecorder,&QPushButton::clicked,this,&MainWindow::slot_btn_tab_recoder_clearRecorder);
@@ -180,7 +194,7 @@ void MainWindow::slot_btn_tabmain_start() {
     srv.request.taskId=2;
     srv.request.mode= false;
     startTaskAggreServer_client.call(srv);
-    
+
 }
 
 void MainWindow::slot_btn_tabmain_sysReset() {
@@ -395,6 +409,55 @@ void MainWindow::slot_btn_twofinger_open() {
 
 void MainWindow::slot_btn_twofinger_close() {
 
+}
+
+void MainWindow::slot_btn_tab_debug_openfile() {
+    QString file_path = QFileDialog::getOpenFileName(this,"选择文件","/home/wangneng/.hirop/data", "Files(*)");
+    QString displayString;
+    QFile file(file_path);
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        return;
+//        qDebug()<<"Can't open the file!"<<endl;
+    }
+    while(!file.atEnd())
+    {
+        QByteArray line = file.readLine();
+        QString str(line);
+        displayString.append(str);
+    }
+    file.close();
+    plainTextEdit_showPoseInfo->clear();
+    plainTextEdit_showPoseInfo->setPlainText(displayString);
+}
+
+void MainWindow::slot_btn_tab_debug_recordPose() {
+    hirop_msgs::savePoseData srv;
+    moveit_group->setStartStateToCurrentState();
+    srv.request.pose = moveit_group->getCurrentPose("link6");
+    if(savePoseMulti.call(srv))
+    {
+        if(srv.response.result == 0)
+        {
+            emit emitQmessageBox(warning,"记录成功!");
+            plainTextEdit_showPoseInfo->appendPlainText("记录成功!");
+            return;
+        }
+    }
+    emit emitQmessageBox(warning,"记录失败!");
+
+}
+
+void MainWindow::slot_btn_tab_debug_writePose() {
+    hirop_msgs::saveDataEnd saveEndSrv;
+    saveEndSrv.request.uri = lineEdit_dirname->text().toStdString();
+    saveEndSrv.request.name = lineEdit_filename->text().toStdString();
+
+    if(!save_pose_data.call(saveEndSrv)){
+        emit emitQmessageBox(warning,"记录失败!");
+    } else{
+        emit emitQmessageBox(information,"记录成功!");
+    }
 }
 
 void MainWindow::slot_btn_tab_recoder_ouputRecorder() {
@@ -714,3 +777,7 @@ void MainWindow::callback_gripperShelfStatus_subscriber(const hirop_msgs::shelfS
         labelstatus_quickChange_rbtool->setText("空");
     }
 }
+
+
+
+
