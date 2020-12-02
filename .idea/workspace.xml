@@ -82,107 +82,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13a320e6-28e8-46fd-9e89-0a6a695f992e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/qtcreator/hs_multigripper/hs_multigripper.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qtcreator/hs_multigripper/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qtcreator/hs_multigripper/mainwindow.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qtcreator/hs_multigripper/mainwindow.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qtcreator/hs_multigripper/mainwindow.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/3rd/log4_cplus/lib/liblog4cplus.so" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/3rd/log4_cplus/lib/liblog4cplus.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/3rd/log4_cplus/lib/liblog4cplus.so.0" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/3rd/log4_cplus/lib/liblog4cplus.so.0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/3rd/log4_cplus/lib/liblog4cplus.so.2.0.5" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/3rd/log4_cplus/lib/liblog4cplus.so.2.0.5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/3rd/log4_cplus/lib/liblogTest.so" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/3rd/log4_cplus/lib/liblogTest.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/3rd/log4_cplus/lib/liblogTest.so.1" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/3rd/log4_cplus/lib/liblogTest.so.1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/3rd/log4_cplus/lib/liblogTest.so.1.0" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/3rd/log4_cplus/lib/liblogTest.so.1.0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/3rd/log4_cplus/lib/liblogTest.so.1.0.0" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/3rd/log4_cplus/lib/liblogTest.so.1.0.0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/scripts/RealRbAndReadPoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/scripts/RealRbAndReadPoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/scripts/RealRbAndTestPoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/scripts/RealRbAndTestPoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/scripts/RvizAndTestPoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/scripts/RvizAndTestPoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/scripts/decConnect.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/scripts/decConnect.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/scripts/killRviz.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/scripts/killRviz.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/scripts/runLaunch.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/scripts/runLaunch.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/scripts/ui_bringup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/scripts/ui_bringup.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/srv/robotConn.srv" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/srv/robotConn.srv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dualrb_solvecube/srv/robotError.srv" beforeDir="false" afterPath="$PROJECT_DIR$/../dualrb_solvecube/srv/robotError.srv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_grabobj/3rd/log4_cplus/lib/liblog4cplus.so" beforeDir="false" afterPath="$PROJECT_DIR$/../rb_grabobj/3rd/log4_cplus/lib/liblog4cplus.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_grabobj/3rd/log4_cplus/lib/liblog4cplus.so.0" beforeDir="false" afterPath="$PROJECT_DIR$/../rb_grabobj/3rd/log4_cplus/lib/liblog4cplus.so.0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_grabobj/3rd/log4_cplus/lib/liblog4cplus.so.2.0.5" beforeDir="false" afterPath="$PROJECT_DIR$/../rb_grabobj/3rd/log4_cplus/lib/liblog4cplus.so.2.0.5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_grabobj/3rd/log4_cplus/lib/liblogTest.so" beforeDir="false" afterPath="$PROJECT_DIR$/../rb_grabobj/3rd/log4_cplus/lib/liblogTest.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_grabobj/3rd/log4_cplus/lib/liblogTest.so.1" beforeDir="false" afterPath="$PROJECT_DIR$/../rb_grabobj/3rd/log4_cplus/lib/liblogTest.so.1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_grabobj/3rd/log4_cplus/lib/liblogTest.so.1.0" beforeDir="false" afterPath="$PROJECT_DIR$/../rb_grabobj/3rd/log4_cplus/lib/liblogTest.so.1.0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_grabobj/3rd/log4_cplus/lib/liblogTest.so.1.0.0" beforeDir="false" afterPath="$PROJECT_DIR$/../rb_grabobj/3rd/log4_cplus/lib/liblogTest.so.1.0.0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_grabobj/include/MainWindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/../rb_grabobj/include/MainWindow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_grabobj/scripts/bringup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../rb_grabobj/scripts/bringup.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_grabobj/scripts/clearNode.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../rb_grabobj/scripts/clearNode.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_grabobj/src/MainWindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../rb_grabobj/src/MainWindow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/3rd/log4_cplus/include/globalvar.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/3rd/log4_cplus/include/log4cplus.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/3rd/log4_cplus/include/log4fun.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/3rd/log4_cplus/include/log4qtfun.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/3rd/log4_cplus/include/logbase.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/3rd/log4_cplus/include/logmanager.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/3rd/log4_cplus/include/messagehandler.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/3rd/log4_cplus/lib/liblog4cplus.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/3rd/log4_cplus/lib/liblog4cplus.so.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/3rd/log4_cplus/lib/liblog4cplus.so.2.0.5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/3rd/log4_cplus/lib/liblogTest.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/3rd/log4_cplus/lib/liblogTest.so.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/3rd/log4_cplus/lib/liblogTest.so.1.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/3rd/log4_cplus/lib/liblogTest.so.1.0.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/CMakeLists.txt.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/include/BaseWindow.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/include/MainWindow.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/launch/devconn.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/launch/handRobotGrab.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/launch/ui_bring_up.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/package.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/3165304.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/backGround.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/backGround2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/notok.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/ok.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/timg.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/timg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/voice_awake.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/voice_sleep.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/五指夹住.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/五指夹住失败.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/传感器失败.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/传感器成功.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/传感器成功11.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/机器人伺服失败.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/机器人故障.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/机器人正常.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/机器人繁忙.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/机器人连接失败.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/相机连接失败.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/相机链接成功.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/阻抗.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/阻抗ok.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/阻抗成功.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/icon/阻抗连接失败.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/light_red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/question.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/photo/question1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/scripts/Close_shankeHand.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/scripts/clearnode.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/scripts/devConn.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/scripts/launch_vision.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/scripts/opensenso.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/scripts/opensensor_order.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/scripts/rbCtlMoudle.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/scripts/rbImpMoudle.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/scripts/rbRunMoudle.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/scripts/rbVoiceMoudle.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/scripts/ui_bringup.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/src/BaseWindow.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/src/MainWindow.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/src/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rb_shakehand/src/test.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -209,14 +111,15 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1klMPB5hzUqR8swsOcXYS6Z2u4J" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rb_grabobj" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
@@ -685,6 +588,7 @@
       <workItem from="1606733432098" duration="3442000" />
       <workItem from="1606721870029" duration="2189000" />
       <workItem from="1606814352599" duration="924000" />
+      <workItem from="1606878187057" duration="436000" />
     </task>
     <servers />
   </component>
