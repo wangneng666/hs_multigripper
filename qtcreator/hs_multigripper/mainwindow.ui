@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>909</width>
-    <height>697</height>
+    <width>937</width>
+    <height>705</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -54,7 +54,7 @@
         <item>
          <widget class="QTabWidget" name="tabWidget">
           <property name="currentIndex">
-           <number>7</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab_main">
            <attribute name="title">
@@ -221,6 +221,13 @@ padding:0 1px;
                        </property>
                       </widget>
                      </item>
+                     <item row="4" column="2">
+                      <widget class="QLabel" name="label_tabmain_asbridge">
+                       <property name="text">
+                        <string>语音桥</string>
+                       </property>
+                      </widget>
+                     </item>
                     </layout>
                    </item>
                   </layout>
@@ -338,11 +345,11 @@ padding:0 1px;
                 <item>
                  <widget class="QTabWidget" name="tab_tab_fsm">
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>0</number>
                   </property>
                   <widget class="QWidget" name="tab_tab_fsm_people">
                    <attribute name="title">
-                    <string>行人检测显示</string>
+                    <string>语音消息监控</string>
                    </attribute>
                    <layout class="QHBoxLayout" name="horizontalLayout_16">
                     <item>
@@ -373,7 +380,7 @@ padding:0 1px;
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="vLayout_tab_fsm_12">
+               <layout class="QVBoxLayout" name="vLayout_tab_fsm_12" stretch="1,0">
                 <item>
                  <widget class="QGroupBox" name="gBox_tab_fsm_status">
                   <property name="styleSheet">
@@ -515,63 +522,8 @@ padding:0 1px;
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QGroupBox" name="gBox_tab_fsm_selectVoice">
-                  <property name="styleSheet">
-                   <string notr="true">QGroupBox{
-
-border-width:2px;
-
-border-style:solid;
-
-border-radius: 10px;
-
-border-color:gray;
-
-margin-top:0.5ex;
-
-}
-
-QGroupBox::title{
-
-subcontrol-origin:margin;
-
-subcontrol-position:top left;
-
-left:10px;
-
-margin-left:0px;
-
-padding:0 1px;
-
-}</string>
-                  </property>
-                  <property name="title">
-                   <string>声控选择</string>
-                  </property>
-                  <layout class="QHBoxLayout" name="horizontalLayout_9">
-                   <item>
-                    <layout class="QGridLayout" name="gLayout_tab_fsm_selectVoice">
-                     <item row="0" column="1">
-                      <widget class="QPushButton" name="btn_tab_fsm_open">
-                       <property name="maximumSize">
-                        <size>
-                         <width>150</width>
-                         <height>50</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>开启</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="0" column="0">
-                      <widget class="QLabel" name="labeltext_tab_fsm_voiceEn">
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_tab_fsm_shakehand">
                        <property name="maximumSize">
                         <size>
                          <width>100</width>
@@ -579,23 +531,46 @@ padding:0 1px;
                         </size>
                        </property>
                        <property name="text">
-                        <string>声控使能</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
+                        <string>五指握手状态</string>
                        </property>
                       </widget>
                      </item>
-                     <item row="0" column="2">
-                      <widget class="QPushButton" name="btn_tab_fsm_close">
+                     <item row="2" column="1">
+                      <widget class="QLabel" name="label_tab_fsm_polish">
                        <property name="maximumSize">
                         <size>
-                         <width>150</width>
+                         <width>100</width>
                          <height>50</height>
                         </size>
                        </property>
                        <property name="text">
-                        <string>关闭</string>
+                        <string>打磨状态</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="2">
+                      <widget class="QLabel" name="label_tab_fsm_grab">
+                       <property name="maximumSize">
+                        <size>
+                         <width>100</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>四指抓取状态</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="3">
+                      <widget class="QLabel" name="label_tab_fsm_twofingerGrab">
+                       <property name="maximumSize">
+                        <size>
+                         <width>100</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>二指抓取状态</string>
                        </property>
                       </widget>
                      </item>
@@ -605,9 +580,19 @@ padding:0 1px;
                  </widget>
                 </item>
                 <item>
-                 <widget class="QGroupBox" name="gBox_tab_fsm_operate">
-                  <property name="styleSheet">
-                   <string notr="true">QGroupBox{
+                 <widget class="QTabWidget" name="tabWidget_tabfsm">
+                  <property name="currentIndex">
+                   <number>3</number>
+                  </property>
+                  <widget class="QWidget" name="tab_mannalControl">
+                   <attribute name="title">
+                    <string>手动控制台</string>
+                   </attribute>
+                   <layout class="QHBoxLayout" name="horizontalLayout_9">
+                    <item>
+                     <widget class="QGroupBox" name="gBox_tab_fsm_operate">
+                      <property name="styleSheet">
+                       <string notr="true">QGroupBox{
 
 border-width:2px;
 
@@ -634,68 +619,406 @@ margin-left:0px;
 padding:0 1px;
 
 }</string>
-                  </property>
-                  <property name="title">
-                   <string>操作栏</string>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_11">
-                   <item>
-                    <layout class="QHBoxLayout" name="hLayout_tab_fsm_121">
-                     <item>
-                      <widget class="QPushButton" name="btn_tab_fsm_run">
-                       <property name="maximumSize">
-                        <size>
-                         <width>150</width>
-                         <height>50</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>启动</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QPushButton" name="btn_tab_fsm_exit">
-                       <property name="maximumSize">
-                        <size>
-                         <width>150</width>
-                         <height>50</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>退出</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QPushButton" name="btn_tab_fsm_reset">
-                       <property name="maximumSize">
-                        <size>
-                         <width>150</width>
-                         <height>50</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>复位</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QPushButton" name="btn_tab_fsm_quickstop">
-                       <property name="maximumSize">
-                        <size>
-                         <width>150</width>
-                         <height>50</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>急停</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                  </layout>
+                      </property>
+                      <property name="title">
+                       <string>操作栏</string>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_11">
+                       <item>
+                        <layout class="QHBoxLayout" name="hLayout_tab_fsm_121">
+                         <item>
+                          <widget class="QPushButton" name="btn_tab_fsm_run">
+                           <property name="maximumSize">
+                            <size>
+                             <width>150</width>
+                             <height>50</height>
+                            </size>
+                           </property>
+                           <property name="text">
+                            <string>启动</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="btn_tab_fsm_exit">
+                           <property name="maximumSize">
+                            <size>
+                             <width>150</width>
+                             <height>50</height>
+                            </size>
+                           </property>
+                           <property name="text">
+                            <string>退出</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="btn_tab_fsm_reset">
+                           <property name="maximumSize">
+                            <size>
+                             <width>150</width>
+                             <height>50</height>
+                            </size>
+                           </property>
+                           <property name="text">
+                            <string>复位</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="btn_tab_fsm_quickstop">
+                           <property name="maximumSize">
+                            <size>
+                             <width>150</width>
+                             <height>50</height>
+                            </size>
+                           </property>
+                           <property name="text">
+                            <string>急停</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="tab_voiceControl">
+                   <attribute name="title">
+                    <string>语音控制台</string>
+                   </attribute>
+                   <layout class="QHBoxLayout" name="horizontalLayout_20">
+                    <item>
+                     <layout class="QVBoxLayout" name="vLayout_tab_voiceControl">
+                      <item>
+                       <widget class="QGroupBox" name="gBox_tab_voiceControlStatus">
+                        <property name="styleSheet">
+                         <string notr="true">QGroupBox{
+
+border-width:2px;
+
+border-style:solid;
+
+border-radius: 10px;
+
+border-color:gray;
+
+margin-top:0.5ex;
+
+}
+
+QGroupBox::title{
+
+subcontrol-origin:margin;
+
+subcontrol-position:top left;
+
+left:10px;
+
+margin-left:0px;
+
+padding:0 1px;
+
+}</string>
+                        </property>
+                        <property name="title">
+                         <string>语音监控</string>
+                        </property>
+                        <layout class="QHBoxLayout" name="horizontalLayout_35">
+                         <item>
+                          <layout class="QGridLayout" name="gLayout_voiceStatus">
+                           <item row="1" column="0">
+                            <widget class="QLabel" name="label_voiceTask_shakehand">
+                             <property name="text">
+                              <string>任务“握手”</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="3">
+                            <widget class="QLabel" name="label_voiceTask_quickStop">
+                             <property name="text">
+                              <string>任务“急停”</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="0">
+                            <widget class="QLabel" name="label_voiceStatus">
+                             <property name="text">
+                              <string>语音接入</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="2">
+                            <widget class="QLabel" name="label_voiceTask_restart">
+                             <property name="text">
+                              <string>任务“复位”</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="2">
+                            <widget class="QLabel" name="label_voiceTask_milk">
+                             <property name="text">
+                              <string>任务“抓牛奶”</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="3">
+                            <widget class="QLabel" name="label_voiceTask_colo">
+                             <property name="text">
+                              <string>任务“抓可乐”</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="1">
+                            <widget class="QLabel" name="label_voiceLockStatus">
+                             <property name="text">
+                              <string>语音任务锁定中</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="1">
+                            <widget class="QLabel" name="label_voiceTask_polish">
+                             <property name="text">
+                              <string>任务“打磨”</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QGroupBox" name="gBox_tab_voiceControlOprate">
+                        <property name="styleSheet">
+                         <string notr="true">QGroupBox{
+
+border-width:2px;
+
+border-style:solid;
+
+border-radius: 10px;
+
+border-color:gray;
+
+margin-top:0.5ex;
+
+}
+
+QGroupBox::title{
+
+subcontrol-origin:margin;
+
+subcontrol-position:top left;
+
+left:10px;
+
+margin-left:0px;
+
+padding:0 1px;
+
+}</string>
+                        </property>
+                        <property name="title">
+                         <string>操作栏</string>
+                        </property>
+                        <layout class="QHBoxLayout" name="horizontalLayout_34">
+                         <item>
+                          <layout class="QGridLayout" name="gLayout_voiceOprate">
+                           <item row="0" column="1">
+                            <widget class="QPushButton" name="btn_closeVoice">
+                             <property name="text">
+                              <string>关闭语音</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="0">
+                            <widget class="QPushButton" name="btn_startVoice">
+                             <property name="text">
+                              <string>开启语音</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="0">
+                            <widget class="QPushButton" name="btn_lockVoice">
+                             <property name="text">
+                              <string>语音模式锁定</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="1">
+                            <widget class="QPushButton" name="btn_unlockVoice">
+                             <property name="text">
+                              <string>语音模式解锁</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="tab_cloudOrder">
+                   <attribute name="title">
+                    <string>云订单控制台</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_9">
+                    <item>
+                     <layout class="QVBoxLayout" name="vLayout_cloudOrder_1">
+                      <item>
+                       <widget class="QGroupBox" name="gBox_tab_cloudOrder_status">
+                        <property name="styleSheet">
+                         <string notr="true">QGroupBox{
+
+border-width:2px;
+
+border-style:solid;
+
+border-radius: 10px;
+
+border-color:gray;
+
+margin-top:0.5ex;
+
+}
+
+QGroupBox::title{
+
+subcontrol-origin:margin;
+
+subcontrol-position:top left;
+
+left:10px;
+
+margin-left:0px;
+
+padding:0 1px;
+
+}</string>
+                        </property>
+                        <property name="title">
+                         <string>云订单监控</string>
+                        </property>
+                        <layout class="QHBoxLayout" name="horizontalLayout_36">
+                         <item>
+                          <layout class="QGridLayout" name="gLayout_tab_cloudOrder_status">
+                           <item row="0" column="0">
+                            <widget class="QLabel" name="label_cloudOrder_en">
+                             <property name="text">
+                              <string>云订单启用</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="1">
+                            <widget class="QLabel" name="label_cloudOrder_taskDoing">
+                             <property name="text">
+                              <string>云订单任务中</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QGroupBox" name="gBox_tab_cloudOrder_operate">
+                        <property name="styleSheet">
+                         <string notr="true">QGroupBox{
+
+border-width:2px;
+
+border-style:solid;
+
+border-radius: 10px;
+
+border-color:gray;
+
+margin-top:0.5ex;
+
+}
+
+QGroupBox::title{
+
+subcontrol-origin:margin;
+
+subcontrol-position:top left;
+
+left:10px;
+
+margin-left:0px;
+
+padding:0 1px;
+
+}</string>
+                        </property>
+                        <property name="title">
+                         <string>操作栏</string>
+                        </property>
+                        <layout class="QHBoxLayout" name="horizontalLayout_37">
+                         <item>
+                          <layout class="QGridLayout" name="gLayout_cloudOrder_operate">
+                           <item row="0" column="0">
+                            <widget class="QPushButton" name="btn_cloudOrder_start">
+                             <property name="text">
+                              <string>启用云订单</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="1">
+                            <widget class="QPushButton" name="btn_cloudOrder_close">
+                             <property name="text">
+                              <string>关闭云订单</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="2">
+                            <widget class="QPushButton" name="btn_cloudOrder_reset">
+                             <property name="text">
+                              <string> 订单异常复位</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="tab_addfunc">
+                   <attribute name="title">
+                    <string>避障与行人检测</string>
+                   </attribute>
+                   <layout class="QHBoxLayout" name="horizontalLayout_38">
+                    <item>
+                     <layout class="QHBoxLayout" name="hLayout_addfunc">
+                      <item>
+                       <widget class="QPushButton" name="btn_tabfsm_avoidingSwitch">
+                        <property name="text">
+                         <string>启用避障功能</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="btn_tabfsm_peopleSwicth">
+                        <property name="text">
+                         <string>启用行人检测</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
                  </widget>
                 </item>
                </layout>
@@ -1201,20 +1524,6 @@ padding:0 1px;
                     </item>
                    </layout>
                   </widget>
-                  <widget class="QWidget" name="tablewidge_fivefinger_yolo6dshow">
-                   <attribute name="title">
-                    <string>yolo6d识别显示</string>
-                   </attribute>
-                   <layout class="QHBoxLayout" name="horizontalLayout_27">
-                    <item>
-                     <widget class="QLabel" name="lable_tab_fivefinger_yolo6dshow">
-                      <property name="text">
-                       <string>TextLabel</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
                  </widget>
                 </item>
                </layout>
@@ -1279,13 +1588,6 @@ padding:0 1px;
                        </property>
                       </widget>
                      </item>
-                     <item row="1" column="1">
-                      <widget class="QLabel" name="lablestatus_tab_fivefinger_grabtoy">
-                       <property name="text">
-                        <string>抓娃娃中状态</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item row="2" column="1">
                       <widget class="QLabel" name="lablestatus_tab_fivefinger_err">
                        <property name="text">
@@ -1300,7 +1602,7 @@ padding:0 1px;
                        </property>
                       </widget>
                      </item>
-                     <item row="3" column="0">
+                     <item row="1" column="1">
                       <widget class="QLabel" name="lablestatus_tab_fivefinger_switchgripper">
                        <property name="text">
                         <string>回到切换夹具状态</string>
@@ -1418,7 +1720,7 @@ padding:0 1px;
                    <item>
                     <widget class="QTabWidget" name="tabWidget_tab_fivefinger">
                      <property name="currentIndex">
-                      <number>0</number>
+                      <number>1</number>
                      </property>
                      <widget class="QWidget" name="tab_tab_fivefinger_shakehand">
                       <attribute name="title">
@@ -1434,19 +1736,12 @@ padding:0 1px;
                           </size>
                          </property>
                          <property name="text">
-                          <string>握手操作</string>
+                          <string>握手开始</string>
                          </property>
                         </widget>
                        </item>
-                      </layout>
-                     </widget>
-                     <widget class="QWidget" name="tab_tab_fivefinger_grab">
-                      <attribute name="title">
-                       <string>抓取功能</string>
-                      </attribute>
-                      <layout class="QHBoxLayout" name="horizontalLayout_20">
                        <item>
-                        <widget class="QPushButton" name="btn_tab_fivefinger_grab">
+                        <widget class="QPushButton" name="btn_tab_fivefinger_StopShakehand">
                          <property name="maximumSize">
                           <size>
                            <width>150</width>
@@ -1454,7 +1749,7 @@ padding:0 1px;
                           </size>
                          </property>
                          <property name="text">
-                          <string>抓取操作</string>
+                          <string>握手停止</string>
                          </property>
                         </widget>
                        </item>
@@ -1465,19 +1760,6 @@ padding:0 1px;
                        <string>状态切换</string>
                       </attribute>
                       <layout class="QHBoxLayout" name="horizontalLayout_21">
-                       <item>
-                        <widget class="QPushButton" name="btn_tab_fivefinger_backsfivefinger">
-                         <property name="maximumSize">
-                          <size>
-                           <width>150</width>
-                           <height>50</height>
-                          </size>
-                         </property>
-                         <property name="text">
-                          <string>回到五指手功能状态</string>
-                         </property>
-                        </widget>
-                       </item>
                        <item>
                         <widget class="QPushButton" name="btn_tab_fivefinger_backswitchGripper">
                          <property name="maximumSize">
@@ -1772,11 +2054,759 @@ padding:0 1px;
            <attribute name="title">
             <string>四指工具界面</string>
            </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_42">
+            <item>
+             <layout class="QHBoxLayout" name="hLayout_fourfingerTool_1">
+              <item>
+               <layout class="QVBoxLayout" name="vLayout_fourfingerTool11">
+                <item>
+                 <widget class="QGroupBox" name="gBox_tab_fourfingerTool_yolo6d">
+                  <property name="styleSheet">
+                   <string notr="true">QGroupBox{
+
+border-width:2px;
+
+border-style:solid;
+
+border-radius: 10px;
+
+border-color:gray;
+
+margin-top:0.5ex;
+
+}
+
+QGroupBox::title{
+
+subcontrol-origin:margin;
+
+subcontrol-position:top left;
+
+left:10px;
+
+margin-left:0px;
+
+padding:0 1px;
+
+}</string>
+                  </property>
+                  <property name="title">
+                   <string>yolo6d识别显示</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_45">
+                   <item>
+                    <widget class="QLabel" name="label_tab_fourfingerTool_yolo6dShow">
+                     <property name="text">
+                      <string>TextLabel</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="vLayout_fourfingerTool12">
+                <item>
+                 <widget class="QGroupBox" name="gBox_tab_fourfingerTool_status_2">
+                  <property name="styleSheet">
+                   <string notr="true">QGroupBox{
+
+border-width:2px;
+
+border-style:solid;
+
+border-radius: 10px;
+
+border-color:gray;
+
+margin-top:0.5ex;
+
+}
+
+QGroupBox::title{
+
+subcontrol-origin:margin;
+
+subcontrol-position:top left;
+
+left:10px;
+
+margin-left:0px;
+
+padding:0 1px;
+
+}</string>
+                  </property>
+                  <property name="title">
+                   <string>状态显示</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_43">
+                   <item>
+                    <layout class="QGridLayout" name="gLayout_tab_fourfingerTool">
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="labelstatus_fourfinger_main">
+                       <property name="text">
+                        <string>主界面状态</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="labelstatus_fourfingerToolEn">
+                       <property name="text">
+                        <string>四指工具使能状态</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="2">
+                      <widget class="QLabel" name="labelstatus_fourfingerTool_grab">
+                       <property name="text">
+                        <string>抓取状态</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="3">
+                      <widget class="QLabel" name="labelstatus_fourfingerswitchGripper">
+                       <property name="text">
+                        <string>回到切换夹具状态</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="gBox_tab_fourfingerTool_oprate">
+                  <property name="styleSheet">
+                   <string notr="true">QGroupBox{
+
+border-width:2px;
+
+border-style:solid;
+
+border-radius: 10px;
+
+border-color:gray;
+
+margin-top:0.5ex;
+
+}
+
+QGroupBox::title{
+
+subcontrol-origin:margin;
+
+subcontrol-position:top left;
+
+left:10px;
+
+margin-left:0px;
+
+padding:0 1px;
+
+}</string>
+                  </property>
+                  <property name="title">
+                   <string>功能操作</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_44">
+                   <item>
+                    <layout class="QGridLayout" name="gLayout_tab_fourfingerTool_operate">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="btn_fourfingerTool_Activate">
+                       <property name="maximumSize">
+                        <size>
+                         <width>150</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>激活功能</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QPushButton" name="btn_fourfinger_Grab">
+                       <property name="maximumSize">
+                        <size>
+                         <width>150</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>抓取</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QPushButton" name="btn_fourfinger_backSwitchGripper">
+                       <property name="maximumSize">
+                        <size>
+                         <width>150</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>回到切换夹具状态</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QPushButton" name="btn_fourfinger_quickstop">
+                       <property name="maximumSize">
+                        <size>
+                         <width>150</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>急停</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
           </widget>
-          <widget class="QWidget" name="tab_twofingerTool">
+          <widget class="QWidget" name="tab_sorting">
            <attribute name="title">
-            <string>二指工具界面</string>
+            <string>分拣工具界面</string>
            </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_27">
+            <item>
+             <widget class="QTabWidget" name="tabWidget_sort">
+              <property name="currentIndex">
+               <number>1</number>
+              </property>
+              <widget class="QWidget" name="tab_tabsort_func">
+               <attribute name="title">
+                <string>功能界面</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_8">
+                <item>
+                 <widget class="QGroupBox" name="gBox_tabsort_status">
+                  <property name="styleSheet">
+                   <string notr="true">QGroupBox{
+
+border-width:2px;
+
+border-style:solid;
+
+border-radius: 10px;
+
+border-color:gray;
+
+margin-top:0.5ex;
+
+}
+
+QGroupBox::title{
+
+subcontrol-origin:margin;
+
+subcontrol-position:top left;
+
+left:10px;
+
+margin-left:0px;
+
+padding:0 1px;
+
+}</string>
+                  </property>
+                  <property name="title">
+                   <string>状态显示</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_39">
+                   <item>
+                    <layout class="QGridLayout" name="gLayout_tabsort_status">
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_tabsort_sortToolEnable">
+                       <property name="text">
+                        <string>分拣工具使能状态</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_tabsort_mainstatus">
+                       <property name="text">
+                        <string>主界面状态</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_tabsort_sortingstatus">
+                       <property name="text">
+                        <string>分拣状态</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLabel" name="lable_tabsort_backswitchstatus">
+                       <property name="text">
+                        <string>回到切换夹具状态</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="gBox_tabsort_oprate">
+                  <property name="styleSheet">
+                   <string notr="true">QGroupBox{
+
+border-width:2px;
+
+border-style:solid;
+
+border-radius: 10px;
+
+border-color:gray;
+
+margin-top:0.5ex;
+
+}
+
+QGroupBox::title{
+
+subcontrol-origin:margin;
+
+subcontrol-position:top left;
+
+left:10px;
+
+margin-left:0px;
+
+padding:0 1px;
+
+}</string>
+                  </property>
+                  <property name="title">
+                   <string>功能操作</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_40">
+                   <item>
+                    <layout class="QGridLayout" name="gLayout_tabsort_oprate">
+                     <item row="0" column="1">
+                      <widget class="QPushButton" name="btn_tabsort_backswitchgripper">
+                       <property name="maximumSize">
+                        <size>
+                         <width>150</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>回到切换夹具状态</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QPushButton" name="btn_tabsort_stopsort">
+                       <property name="maximumSize">
+                        <size>
+                         <width>150</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>本次分拣停止</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QPushButton" name="btn_tabsort_beginsort">
+                       <property name="maximumSize">
+                        <size>
+                         <width>150</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>开始分拣</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="btn_tabsort_activate">
+                       <property name="maximumSize">
+                        <size>
+                         <width>150</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>激活功能</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QPushButton" name="btn_tabsort_quickstop">
+                       <property name="maximumSize">
+                        <size>
+                         <width>150</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>急停</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="tab_tabsort_calibrate">
+               <attribute name="title">
+                <string>标定界面</string>
+               </attribute>
+               <layout class="QHBoxLayout" name="horizontalLayout_41" stretch="1,1">
+                <item>
+                 <layout class="QVBoxLayout" name="vLayout_tabsort_21" stretch="1,1">
+                  <item>
+                   <widget class="QGroupBox" name="gBox_tabsort_calibrateSet">
+                    <property name="styleSheet">
+                     <string notr="true">QGroupBox{
+
+border-width:2px;
+
+border-style:solid;
+
+border-radius: 10px;
+
+border-color:gray;
+
+margin-top:0.5ex;
+
+}
+
+QGroupBox::title{
+
+subcontrol-origin:margin;
+
+subcontrol-position:top left;
+
+left:10px;
+
+margin-left:0px;
+
+padding:0 1px;
+
+}</string>
+                    </property>
+                    <property name="title">
+                     <string>标定设置</string>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_46">
+                     <item>
+                      <layout class="QGridLayout" name="gLayout_calibrateSet">
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_toolTcp">
+                         <property name="text">
+                          <string>工具TCP</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QLineEdit" name="lineEdit_x">
+                         <property name="placeholderText">
+                          <string>x</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QLineEdit" name="lineEdit_y">
+                         <property name="placeholderText">
+                          <string>y</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="3">
+                        <widget class="QLineEdit" name="lineEdit_z">
+                         <property name="placeholderText">
+                          <string>z</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="4">
+                        <widget class="QLineEdit" name="lineEdit_rx">
+                         <property name="placeholderText">
+                          <string>rx</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="5">
+                        <widget class="QLineEdit" name="lineEdit_ry">
+                         <property name="placeholderText">
+                          <string>ry</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="6">
+                        <widget class="QLineEdit" name="lineEdit_rz">
+                         <property name="placeholderText">
+                          <string>rz</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_calibrateNum">
+                         <property name="text">
+                          <string>标定图像张数</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1" colspan="6">
+                        <widget class="QLineEdit" name="lineEdit_calibrateNum">
+                         <property name="placeholderText">
+                          <string>请填写标定所需数量</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QGroupBox" name="gBox_tabsort_calibrateOprate">
+                    <property name="styleSheet">
+                     <string notr="true">QGroupBox{
+
+border-width:2px;
+
+border-style:solid;
+
+border-radius: 10px;
+
+border-color:gray;
+
+margin-top:0.5ex;
+
+}
+
+QGroupBox::title{
+
+subcontrol-origin:margin;
+
+subcontrol-position:top left;
+
+left:10px;
+
+margin-left:0px;
+
+padding:0 1px;
+
+}</string>
+                    </property>
+                    <property name="title">
+                     <string>标定操作</string>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_47">
+                     <item>
+                      <layout class="QGridLayout" name="gLayout_calibrateOprate">
+                       <item row="1" column="0">
+                        <widget class="QPushButton" name="btn_calibrateOprate_finish">
+                         <property name="maximumSize">
+                          <size>
+                           <width>150</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>标定完成</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QPushButton" name="btn_calibrateOprate_initset">
+                         <property name="maximumSize">
+                          <size>
+                           <width>150</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>初始化设置</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QPushButton" name="btn_calibrateOprate_calibrate">
+                         <property name="maximumSize">
+                          <size>
+                           <width>150</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>标定</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QPushButton" name="btn_calibrateOprate_reset">
+                         <property name="maximumSize">
+                          <size>
+                           <width>150</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>重新标定</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="vLayout_tabsort_22" stretch="1,1">
+                  <item>
+                   <widget class="QGroupBox" name="gBox_tabsort_calibrateStatus">
+                    <property name="styleSheet">
+                     <string notr="true">QGroupBox{
+
+border-width:2px;
+
+border-style:solid;
+
+border-radius: 10px;
+
+border-color:gray;
+
+margin-top:0.5ex;
+
+}
+
+QGroupBox::title{
+
+subcontrol-origin:margin;
+
+subcontrol-position:top left;
+
+left:10px;
+
+margin-left:0px;
+
+padding:0 1px;
+
+}</string>
+                    </property>
+                    <property name="title">
+                     <string>状态显示</string>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_49">
+                     <item>
+                      <layout class="QGridLayout" name="gLayout_calibrateStatus">
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_calibrateProgress">
+                         <property name="text">
+                          <string>标定进度</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QProgressBar" name="progressBar_calibrate">
+                         <property name="value">
+                          <number>0</number>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QGroupBox" name="gBox_tabsort_calibratedataRecv">
+                    <property name="styleSheet">
+                     <string notr="true">QGroupBox{
+
+border-width:2px;
+
+border-style:solid;
+
+border-radius: 10px;
+
+border-color:gray;
+
+margin-top:0.5ex;
+
+}
+
+QGroupBox::title{
+
+subcontrol-origin:margin;
+
+subcontrol-position:top left;
+
+left:10px;
+
+margin-left:0px;
+
+padding:0 1px;
+
+}</string>
+                    </property>
+                    <property name="title">
+                     <string>数据接收</string>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_50">
+                     <item>
+                      <widget class="QPlainTextEdit" name="plainText_RecvData"/>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
           </widget>
           <widget class="QWidget" name="tab_debug">
            <attribute name="title">
@@ -1815,7 +2845,7 @@ padding:0 1px;
 }</string>
               </property>
               <property name="currentIndex">
-               <number>2</number>
+               <number>1</number>
               </property>
               <widget class="QWidget" name="tab_tab_debug_robot">
                <attribute name="title">
@@ -2228,6 +3258,19 @@ padding:0 1px;
                       </property>
                       <layout class="QHBoxLayout" name="horizontalLayout_32">
                        <item>
+                        <widget class="QPushButton" name="btn_startMoveit">
+                         <property name="maximumSize">
+                          <size>
+                           <width>150</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>激活功能</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
                         <widget class="QPushButton" name="btn_tab_debug_openfile">
                          <property name="maximumSize">
                           <size>
@@ -2293,7 +3336,7 @@ padding:0 1px;
                            </property>
                           </widget>
                          </item>
-                         <item row="2" column="1">
+                         <item row="3" column="1">
                           <widget class="QPushButton" name="btn_tab_debug_writePose">
                            <property name="maximumSize">
                             <size>
@@ -2337,6 +3380,46 @@ padding:0 1px;
                              <height>50</height>
                             </size>
                            </property>
+                          </widget>
+                         </item>
+                         <item row="3" column="0">
+                          <widget class="QPushButton" name="btn_tab_debug_recordPose">
+                           <property name="text">
+                            <string>记录点位</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="0">
+                          <widget class="QLabel" name="label_poseType">
+                           <property name="maximumSize">
+                            <size>
+                             <width>150</width>
+                             <height>50</height>
+                            </size>
+                           </property>
+                           <property name="text">
+                            <string>记录点位类型</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QComboBox" name="cBox_posetype">
+                           <property name="maximumSize">
+                            <size>
+                             <width>250</width>
+                             <height>50</height>
+                            </size>
+                           </property>
+                           <item>
+                            <property name="text">
+                             <string>关节点位</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>笛卡尔点位</string>
+                            </property>
+                           </item>
                           </widget>
                          </item>
                         </layout>

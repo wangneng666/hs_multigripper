@@ -17,6 +17,7 @@ sensor_msgs
 cv_bridge
 image_transport
 tf
+
 )
 
 find_package(OpenCV)
@@ -63,15 +64,24 @@ include_directories(
 
 add_executable(hs_multigripper
         src/main.cpp
-        include/MainWindow.h
-        src/BaseWindow.cpp
-        src/MainWindow.cpp
+        include/HsRobWidget.h
+        src/UiWidget.cpp
+        src/HsRobWidget.cpp
         )
 
 target_link_libraries(hs_multigripper
         ${catkin_LIBRARIES}
         ${QT_LIBRARIES}
         ${OpenCV_LIBS}
+        )
+
+add_executable(VoiceControl
+        src/VoiceControl.cpp
+        )
+
+target_link_libraries(VoiceControl
+        ${catkin_LIBRARIES}
+        jsoncpp
         )
 
 

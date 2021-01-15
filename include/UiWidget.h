@@ -24,6 +24,8 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QProgressBar>
 #include <QPainter>
+#include <QTextDocument>
+#include <QtCore/QJsonDocument>
 #include <QDateTime>
 #include <QDialog>
 #include <QDir>
@@ -59,10 +61,10 @@ class gobang_widget:public QWidget{
 
 };
 
-class BaseWindow: public QMainWindow {
+class UiWidget: public QMainWindow {
 public:
-    BaseWindow(ros::NodeHandle* node,QWidget* parent = Q_NULLPTR);
-    ~BaseWindow();
+    UiWidget(ros::NodeHandle* node, QWidget* parent = Q_NULLPTR);
+    ~UiWidget();
 
 public:
     //UI流程
@@ -98,10 +100,9 @@ public:
     QLabel *label_tabmain_rbconn;
     QLabel *label_tabmain_rbIsWell;
     QLabel *label_tabmain_rbEnable;
-    QLabel *label_tabmain_pickPlaceBridge;
     QLabel *label_tabmain_forceSensor;
     QLabel *label_tabmain_d435iConn;
-    QLabel *label_tabmain_kinect2Conn;
+    QLabel *label_tabmain_hscloudcollection;
     QLabel *label_tabmain_versionBridge;
     QLabel *label_tabmain_gripperbridge;
     QLabel *label_tabmain_fsmBridge;
@@ -112,13 +113,15 @@ public:
     QLabel *label_tabmain_forcebridge;
     QLabel *label_tabmain_perceptionBridge;
     QLabel *label_tabmain_quickchange;
+    QLabel *label_tabmain_pickPlaceBridge;
+    QLabel *label_tabmain_asbridge;
     QHBoxLayout *hLayout_tabmain_31;
     QGroupBox *gBox_tabmain_func;
     QHBoxLayout *horizontalLayout_7;
     QPushButton *btn_tabmain_devConn;
+    QPushButton *btn_tabmain_start;
     QPushButton *btn_tabmain_sysStop;
     QPushButton *btn_tabmain_sysReset;
-    QPushButton *btn_tabmain_start;
     QWidget *tab_fsm;
     QHBoxLayout *horizontalLayout_5;
     QHBoxLayout *hLayout_tab_fsm_1;
@@ -126,7 +129,7 @@ public:
     QTabWidget *tab_tab_fsm;
     QWidget *tab_tab_fsm_people;
     QHBoxLayout *horizontalLayout_16;
-    QLabel *label_tab_fsm_peopleImg;
+    QPlainTextEdit *plainTextEdit_tab_fsm_voiceText;
     QWidget *tab_tab_fsm_yolo6d;
     QHBoxLayout *horizontalLayout_23;
     QLabel *label_tab_fsm_yolo6dImg;
@@ -142,12 +145,13 @@ public:
     QLabel *label_tab_fsm_twofinger;
     QLabel *label_tab_fsm_fourfinger;
     QLabel *label_tab_fsm_nopower;
-    QGroupBox *gBox_tab_fsm_selectVoice;
+    QLabel *label_tab_fsm_shakehand;
+    QLabel *label_tab_fsm_polish;
+    QLabel *label_tab_fsm_grab;
+    QLabel *label_tab_fsm_twofingerGrab;
+    QTabWidget *tabWidget_tabfsm;
+    QWidget *tab_mannalControl;
     QHBoxLayout *horizontalLayout_9;
-    QGridLayout *gLayout_tab_fsm_selectVoice;
-    QPushButton *btn_tab_fsm_open;
-    QLabel *labeltext_tab_fsm_voiceEn;
-    QPushButton *btn_tab_fsm_close;
     QGroupBox *gBox_tab_fsm_operate;
     QVBoxLayout *verticalLayout_11;
     QHBoxLayout *hLayout_tab_fsm_121;
@@ -155,6 +159,47 @@ public:
     QPushButton *btn_tab_fsm_exit;
     QPushButton *btn_tab_fsm_reset;
     QPushButton *btn_tab_fsm_quickstop;
+    QWidget *tab_voiceControl;
+    QHBoxLayout *horizontalLayout_20;
+    QVBoxLayout *vLayout_tab_voiceControl;
+    QGroupBox *gBox_tab_voiceControlStatus;
+    QHBoxLayout *horizontalLayout_35;
+    QGridLayout *gLayout_voiceStatus;
+    QLabel *label_voiceTask_shakehand;
+    QLabel *label_voiceTask_quickStop;
+    QLabel *label_voiceStatus;
+    QLabel *label_voiceTask_restart;
+    QLabel *label_voiceTask_milk;
+    QLabel *label_voiceTask_colo;
+    QLabel *label_voiceLockStatus;
+    QLabel *label_voiceTask_polish;
+    QLabel *label_voiceTask_ByBy;
+    QGroupBox *gBox_tab_voiceControlOprate;
+    QHBoxLayout *horizontalLayout_34;
+    QGridLayout *gLayout_voiceOprate;
+    QPushButton *btn_closeVoice;
+    QPushButton *btn_startVoice;
+    QPushButton *btn_lockVoice;
+    QPushButton *btn_unlockVoice;
+    QWidget *tab_cloudOrder;
+    QVBoxLayout *vLayout_9;
+    QVBoxLayout *vLayout_cloudOrder_1;
+    QGroupBox *gBox_tab_cloudOrder_status;
+    QHBoxLayout *horizontalLayout_36;
+    QGridLayout *gLayout_tab_cloudOrder_status;
+    QLabel *label_cloudOrder_en;
+    QLabel *label_cloudOrder_taskDoing;
+    QGroupBox *gBox_tab_cloudOrder_operate;
+    QHBoxLayout *hLayout_37;
+    QGridLayout *gLayout_cloudOrder_operate;
+    QPushButton *btn_cloudOrder_start;
+    QPushButton *btn_cloudOrder_close;
+    QPushButton *btn_cloudOrder_reset;
+    QWidget *tab_addfunc;
+    QHBoxLayout *horizontalLayout_38;
+    QHBoxLayout *hLayout_addfunc;
+    QPushButton *btn_tabfsm_avoidingSwitch;
+    QPushButton *btn_tabfsm_peopleSwicth;
     QWidget *tab_quickChange;
     QHBoxLayout *horizontalLayout_8;
     QHBoxLayout *hLayout_quickChange_1;
@@ -200,9 +245,6 @@ public:
     QWidget *tablewidge_fivefinger_peopleshow;
     QHBoxLayout *horizontalLayout_26;
     QLabel *lable_tab_fivefinger_peopleshow;
-    QWidget *tablewidge_fivefinger_yolo6dshow;
-    QHBoxLayout *horizontalLayout_27;
-    QLabel *lable_tab_fivefinger_yolo6dshow;
     QVBoxLayout *vLayout_tab_fivefinger_12;
     QGroupBox *gBox_tab_fivefinger_fsm;
     QHBoxLayout *horizontalLayout_17;
@@ -210,7 +252,6 @@ public:
     QLabel *lablestatus_tab_fivefinger_fivefinger;
     QLabel *lablestatus_tab_fivefinger_init;
     QLabel *lablestatus_tab_fivefinger_shakehand;
-    QLabel *lablestatus_tab_fivefinger_grabtoy;
     QLabel *lablestatus_tab_fivefinger_err;
     QLabel *lablestatus_tab_fivefinger_exit;
     QLabel *lablestatus_tab_fivefinger_switchgripper;
@@ -225,12 +266,9 @@ public:
     QWidget *tab_tab_fivefinger_shakehand;
     QHBoxLayout *horizontalLayout_19;
     QPushButton *btn_tab_fivefinger_shakehand;
-    QWidget *tab_tab_fivefinger_grab;
-    QHBoxLayout *horizontalLayout_20;
-    QPushButton *btn_tab_fivefinger_grab;
+    QPushButton *btn_tab_fivefinger_StopShakehand;
     QWidget *tab_tab_fivefinger_switchfsmstatus;
     QHBoxLayout *horizontalLayout_21;
-    QPushButton *btn_tab_fivefinger_backsfivefinger;
     QPushButton *btn_tab_fivefinger_backswitchGripper;
     QWidget *tab_nopowerTool;
     QVBoxLayout *verticalLayout_3;
@@ -253,10 +291,98 @@ public:
     QPushButton *btn_tab_nopower_quickstop;
     QWidget *tab_tab_nopowerTool_setTool;
     QVBoxLayout *verticalLayout_7;
-    QGroupBox *gBox_ab_nopower_record;
+    QGroupBox *gBox_ab_nopower_testPose;
+    QHBoxLayout *horizontalLayout_27;
+    QGridLayout *gLayout_nopower_testPose;
+    QPushButton *btn_polish_stepMoveActivate;
+    QLabel *label_polish_loopTestStatus;
+    QLabel *label_polish_stepTestStatus;
+    QPushButton *btn_polish_loopMoveActivate;
+    QLabel *label_polish_testProgress;
+    QLabel *labelValue_polish_testProgress;
     QGroupBox *gBox_ab_nopower_func;
+    QHBoxLayout *horizontalLayout_37;
+    QHBoxLayout *hLayout_tabPolish_testTab1;
+    QPushButton *btn_polish_stepMove;
+    QPushButton *btn_polish_goHome;
+    QPushButton *btn_polish_loopMove;
+    QPushButton *btn_polish_exitTest;
+    QPushButton *btn_tab_nopower_Activate;
     QWidget *tab_fourfingerTool;
-    QWidget *tab_twofingerTool;
+    QHBoxLayout *horizontalLayout_42;
+    QHBoxLayout *hLayout_fourfingerTool_1;
+    QVBoxLayout *vLayout_fourfingerTool11;
+    QGroupBox *gBox_tab_fourfingerTool_yolo6d;
+    QHBoxLayout *horizontalLayout_45;
+    QLabel *label_tab_fourfingerTool_yolo6dShow;
+    QVBoxLayout *vLayout_fourfingerTool12;
+    QGroupBox *gBox_tab_fourfingerTool_status_2;
+    QHBoxLayout *horizontalLayout_43;
+    QGridLayout *gLayout_tab_fourfingerTool;
+    QLabel *labelstatus_fourfinger_main;
+    QLabel *labelstatus_fourfingerToolEn;
+    QLabel *labelstatus_fourfingerTool_grab;
+    QLabel *labelstatus_fourfingerswitchGripper;
+    QGroupBox *gBox_tab_fourfingerTool_oprate;
+    QHBoxLayout *horizontalLayout_44;
+    QGridLayout *gLayout_tab_fourfingerTool_operate;
+    QPushButton *btn_fourfingerTool_Activate;
+    QPushButton *btn_fourfinger_Grab;
+    QPushButton *btn_fourfinger_backSwitchGripper;
+    QPushButton *btn_fourfinger_quickstop;
+
+    QWidget *tab_sorting;
+    QHBoxLayout *hLayout_tab_sorting_27;
+    QTabWidget *tabWidget_sort;
+    QWidget *tab_tabsort_func;
+    QVBoxLayout *verticalLayout_8;
+    QGroupBox *gBox_tabsort_status;
+    QHBoxLayout *horizontalLayout_39;
+    QGridLayout *gLayout_tabsort_status;
+    QLabel *label_tabsort_sortToolEnable;
+    QLabel *label_tabsort_mainstatus;
+    QLabel *label_tabsort_sortingstatus;
+    QLabel *lable_tabsort_backswitchstatus;
+    QGroupBox *gBox_tabsort_oprate;
+    QHBoxLayout *horizontalLayout_40;
+    QGridLayout *gLayout_tabsort_oprate;
+    QPushButton *btn_tabsort_backswitchgripper;
+    QPushButton *btn_tabsort_stopsort;
+    QPushButton *btn_tabsort_beginsort;
+    QPushButton *btn_tabsort_activate;
+    QPushButton *btn_tabsort_quickstop;
+    QWidget *tab_tabsort_calibrate;
+    QHBoxLayout *horizontalLayout_41;
+    QVBoxLayout *vLayout_tabsort_21;
+    QGroupBox *gBox_tabsort_calibrateSet;
+    QHBoxLayout *horizontalLayout_46;
+    QGridLayout *gLayout_calibrateSet;
+    QLabel *label_toolTcp;
+    QLineEdit *lineEdit_x;
+    QLineEdit *lineEdit_y;
+    QLineEdit *lineEdit_z;
+    QLineEdit *lineEdit_rx;
+    QLineEdit *lineEdit_ry;
+    QLineEdit *lineEdit_rz;
+    QLabel *label_calibrateNum;
+    QLineEdit *lineEdit_calibrateNum;
+    QGroupBox *gBox_tabsort_calibrateOprate;
+    QHBoxLayout *horizontalLayout_47;
+    QGridLayout *gLayout_calibrateOprate;
+    QPushButton *btn_calibrateOprate_finish;
+    QPushButton *btn_calibrateOprate_initset;
+    QPushButton *btn_calibrateOprate_calibrate;
+    QPushButton *btn_calibrateOprate_reset;
+    QVBoxLayout *vLayout_tabsort_22;
+    QGroupBox *gBox_tabsort_calibrateStatus;
+    QHBoxLayout *horizontalLayout_49;
+    QGridLayout *gLayout_calibrateStatus;
+    QLabel *label_calibrateProgress;
+    QProgressBar *progressBar_calibrate;
+    QGroupBox *gBox_tabsort_calibratedataRecv;
+    QHBoxLayout *horizontalLayout_50;
+    QPlainTextEdit *plainText_RecvData;
+
     QWidget *tab_debug;
     QVBoxLayout *verticalLayout_5;
     QTabWidget *tabWidget_tab_debug;
@@ -283,7 +409,6 @@ public:
     QHBoxLayout *horizontalLayout_15;
     QPushButton *btn_twofinger_open;
     QPushButton *btn_twofinger_close;
-    //点位记录
     QWidget *tab_tab_debug_poseDebug;
     QHBoxLayout *horizontalLayout_29;
     QHBoxLayout *horizontalLayout_30;
@@ -294,16 +419,19 @@ public:
     QVBoxLayout *verticalLayout_12;
     QGroupBox *gBox_showFileInfo;
     QHBoxLayout *horizontalLayout_32;
+    QPushButton *btn_startMoveit;
     QPushButton *btn_tab_debug_openfile;
     QGroupBox *groupBox_2;
     QHBoxLayout *horizontalLayout_33;
     QGridLayout *gridLayout;
     QLabel *label_tab_debug_dirname;
-    QPushButton *btn_tab_debug_recordPose;
     QPushButton *btn_tab_debug_writePose;
     QLineEdit *lineEdit_dirname;
     QLabel *label_tab_debug_fileName;
     QLineEdit *lineEdit_filename;
+    QPushButton *btn_tab_debug_recordPose;
+    QLabel *label_poseType;
+    QComboBox *cBox_posetype;
     QWidget *tab_recorder;
     QHBoxLayout *horizontalLayout_3;
     QVBoxLayout *vLayout_tab_recorder_1;
